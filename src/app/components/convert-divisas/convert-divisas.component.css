@@ -1,0 +1,49 @@
+.section{
+  margin-top: 80px;
+  display: grid;
+  justify-content: center;
+}
+.section-converter{
+  
+  display: flex;
+  justify-content: center;
+  
+}
+.container mat-form-field + mat-form-field {
+    margin-left: 8px;
+    
+  }
+.select-divisas{
+  width: 260px;
+}
+.section-result{
+  display: flex;
+  justify-content: space-between;
+  padding-left: 200px;
+  
+}
+.result-container{
+  padding-top: 140px;
+  
+}
+.result-text{
+  font-size: 40px;
+}
+.exchange-img{
+    width: 80px;
+    height: 80px;
+    margin: 0px 12px;
+    cursor: pointer;
+    border-radius: 50%;
+    border: 1px solid transparent;
+    transition: .8s;
+    
+  }
+  .exchange-img:hover{
+    border: 1px solid rgb(83, 83, 249);
+  }
+ 
+  .dollars-img{
+    width: 400px;
+    margin-right: 200px;
+  }

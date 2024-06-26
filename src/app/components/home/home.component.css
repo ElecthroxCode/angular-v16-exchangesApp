@@ -1,0 +1,23 @@
+.content-menu{
+    display: flex; 
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+.content-menu-btn{
+    display: flex;
+    justify-content: space-between;
+    width: 37%;
+}
+button{
+    width: 260px;
+    border-radius: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.btn-exchange:hover{
+    background-color: rgb(60, 140, 252);
+}
+.btn-temp:hover{
+    background-color: rgb(254, 78, 78);
+}

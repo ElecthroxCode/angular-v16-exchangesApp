@@ -1,0 +1,19 @@
+
+.toolbar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+    background-color: rgba(194, 255, 235, 0.263);
+}
+.toolbar-general{
+    display: flex;
+    width: 460px;
+    justify-content: space-between;
+}
+.toolbar-general a{
+    text-decoration: none;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: rgb(74, 194, 250);
+}

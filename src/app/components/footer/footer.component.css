@@ -1,0 +1,21 @@
+
+.footer{
+    margin-top: 80px;
+}
+.footer-card{
+    background-color: rgb(21, 17, 17);
+}
+.card-container{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    color: aliceblue;
+}
+a{
+    color: rgb(195, 227, 255);
+    text-decoration: none;
+}
+.references-imgs{
+    display: grid;
+    padding-bottom: 28px;
+}

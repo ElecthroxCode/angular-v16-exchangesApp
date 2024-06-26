@@ -1,0 +1,54 @@
+<div class="section">
+  <h1>Convertidor de Divisas</h1>
+  <div class="section-converter">
+    <div class="container">
+      <mat-form-field hintLabel="Max 10 characters">
+        <mat-label>Cantidad</mat-label>
+        <input matInput  #input maxlength="10" placeholder="Ex. Nougat" [(ngModel)]="amount" />
+        <mat-hint align="end">{{ input.value.length }}/10</mat-hint>
+      </mat-form-field>
+
+      <mat-form-field class="select-divisas">
+        <mat-label>Divisas</mat-label>
+        <mat-select [(ngModel)]="valueOne" (selectionChange)="onSelect(amount, valueOne, valueTwo)">
+          <mat-option *ngFor="let item of divisas" [value]="item">{{item}}</mat-option>
+        </mat-select>
+        <mat-hint align="end">Here's the dropdown arrow ^</mat-hint>
+      </mat-form-field>
+    </div>
+    <div class="exchange">
+      <img
+        class="exchange-img"
+        src="./assets/images/vect_exchange.jpg"
+        alt=""
+        (click)="onSelect(amount,valueOne,valueTwo)"
+      />
+    </div>
+    <div class="container">
+  
+      <mat-form-field class="select-divisas">
+        <mat-label>Divisas</mat-label>
+        <mat-select [(ngModel)]="valueTwo" (selectionChange)="onSelect(amount,valueOne,valueTwo)">
+          <mat-option *ngFor="let item of divisas" [value]="item" >{{item}}</mat-option>
+        </mat-select>
+        <mat-hint align="end">Here's the dropdown arrow ^</mat-hint>
+      </mat-form-field>
+    </div>
+  </div>
+</div>
+<div class="section-result">
+  <div class="result-container" *ngIf="resultObj$ | async as result">
+    
+    <span class="result-text" *ngFor="let currency of getCurrencyKeys(result.rates)">
+      {{amount}} {{valueOne.slice(0, 3)}} = $ {{result.rates[currency]}} {{currency}}
+    </span>
+    
+  </div>
+  <div *ngIf="resultObj$ | async as result">
+      <img class="dollars-img" src="./assets/images/money-vector.jpg" alt="">
+  </div>
+  <div class="result-container" *ngIf="!(resultObj$ | async)">
+    <p class="result-text">Cargando...VACIO</p>
+  </div>
+</div>
+
